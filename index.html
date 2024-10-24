@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="module/main.mjs"></script>
+    <script src="https://kit.fontawesome.com/b8f779d699.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- Main Header space for name and introduction funsies-->
+    <section id="home">
+        <div class="canvas">
+
+        </div>
+    </section>
+    <!-- Navigation bar -->
+    <nav class="nav-main">
+        <div class="page-link" data-link="home">HOME</div>
+        <div class="page-link" data-link="about">ABOUT</div>
+        <div class="page-link" data-link="portfolio">PORTFOLIO</div>
+        <div class="page-link" data-link="contact">CONTACT</div>
+        <a class="site-link" href="https://github.com/dragonkie"><i class="fa-brands fa-github fa-xl" title="github"></i></a>
+        <a class="site-link" href="https://www.linkedin.com/in/kieran-knowles-a543a4328/"><i class="fa-brands fa-linkedin fa-xl" title="linkedin"></i></i></a>
+    </nav>
+
+    <!-- About -->
+    <section id="about">
+        <div class="section-content">
+            <div class="header">
+                About
+                <div class="border"></div>
+            </div>
+            <!-- Skills bubbles -->
+            <div class="flex row skills">
+                <div class="flex row">
+                    <div class="flex wrapper">
+                        <div class="hexagon">
+                            <img src="assets/icons/cube.svg" alt="3d cube" width="40" height="40">
+                        </div>
+                        <div>
+                            <div style="text-align: center; font-weight: bold; font-size: 28px;">
+                                Modeller
+                            </div>
+                            <div style="text-align: center;">
+                                Skill description and what not can go here,make sure that text wraps properly and doesnt
+                                squish
+                                other space to much
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex wrapper">
+                        <div class="hexagon">
+                            <img src="assets/icons/paint.svg" alt="3d cube" width="40" height="40">
+                        </div>
+                        <div>
+                            <div class="skill-label" style="text-align: center; font-weight: bold; font-size: 28px;">
+                                Designer
+                            </div>
+                            <div class="skill-description" style="text-align: center;">
+                                Skill description and what not can go here,make sure that text wraps properly and doesnt
+                                squish
+                                other space to much
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex row">
+                    <div class="flex wrapper">
+                        <div class="hexagon">
+                            <img src="assets/icons/file.svg" alt="3d cube" width="40" height="40">
+                        </div>
+                        <div>
+                            <div style="text-align: center; font-weight: bold; font-size: 28px;">
+                                Developer
+                            </div>
+                            <div style="text-align: center;">
+                                Skill description and what not can go here,make sure that text wraps properly and doesnt
+                                squish
+                                other space to much
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex wrapper">
+                        <div class="hexagon">
+                            <img src="assets/icons/dice.svg" alt="3d cube" width="40" height="40">
+                        </div>
+                        <div>
+                            <div style="text-align: center; font-weight: bold; font-size: 28px;">
+                                Creator
+                            </div>
+                            <div style="text-align: center;">
+                                Skill description and what not can go here,make sure that text wraps properly and doesnt
+                                squish
+                                other space to much
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Skill Bar specifics -->
+            <div class="flex row">
+                <!-- Job description -->
+                <div class="flex" style="flex: 1;">
+                    <div>Name</div>
+                </div>
+                <!-- Skills and confidence bars -->
+                <div class="flex" style="flex: 1;">
+                    <div class="bar flex row">
+                        <div class="tag">JavaScript</div>
+                        <div class="fill" style="flex-basis: calc(var(--bar-w) * 0.9);"></div>
+                    </div>
+                    <div class="bar flex row">
+                        <div class="tag">CSS</div>
+                        <div class="fill" style="flex-basis: calc(var(--bar-w) * 0.9)"></div>
+                    </div>
+                    <div class="bar flex row">
+                        <div class="tag">HTML</div>
+                        <div class="fill" style="flex-basis: calc(var(--bar-w) * 0.8)"></div>
+                    </div>
+                    <div class="bar flex row">
+                        <div class="tag">C++</div>
+                        <div class="fill" style="flex-basis: calc(var(--bar-w) * 0.8)"></div>
+                    </div>
+                    <div class="bar flex row">
+                        <div class="tag">C#</div>
+                        <div class="fill" style="flex-basis: calc(var(--bar-w) * 0.4)"></div>
+                    </div>
+                    <div class="bar flex row">
+                        <div class="tag">Python</div>
+                        <div class="fill" style="flex-basis: calc(var(--bar-w) * 0.1)"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery -->
+    <section id="portfolio">
+        <div class="section-content">
+            <div class="header">
+                Projects
+                <div class="border"></div>
+            </div>
+            <div class="flex row" style="margin: 0 200px; margin-bottom: 2rem;">
+                <div class="filter">All</div>
+                <div class="filter">Design</div>
+                <div class="filter">Games</div>
+                <div class="filter">Software</div>
+            </div>
+            <div class="library flex row">
+            </div>
+            <div class="modal">
+                <div class="content">
+                    <div class="close">
+                        <i class="fa-solid fa-circle-xmark fa-2xl"></i>
+                    </div>
+                    <div id="carousel" class="carousel">
+                        <div class="controls">
+                            <div class="control left">
+                                <div class="arrow"></div>
+                                <div class="gradient"></div>
+                            </div>
+                            <div class="control right">
+                                <div class="arrow"></div>
+                                <div class="gradient"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+        <div class="section-content">
+            <div class="header">
+                Contact
+                <div class="border" style="background-color: white;"></div>
+            </div>
+    
+            <div class="flex row">
+                <form class="flex" action="send.php" method="post">
+                    <input required name="name" type="text" placeholder="Name (required)" />
+                    <input required name="email" type="email" placeholder="Email (required)" />
+                    <textarea name="message" placeholder="Message"></textarea>
+                    <input type="submit" id="submit" value="SUBMIT" />
+                </form>
+            </div>
+        </div>
+        
+    </section>
+
+    <!-- Footer -->
+     <section id="footer">
+        
+     </section>
+</body>
+
+</html>
