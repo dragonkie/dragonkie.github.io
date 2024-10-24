@@ -242,5 +242,22 @@ window.onload = () => {
             else l.classList.remove('active');
         }
     }
+
+    /*--------------------------------------------------*/
+    /* Webapp interception for contact form             */
+    /*--------------------------------------------------*/
+    const cForm = document.getElementById("contact-form");
+    cForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const data = new FormData(cForm);
+        const action = e.target.action;
+        fetch(action, {
+            method: 'POST',
+            body: data
+        }).then(() => {
+            alert('Contact success');
+        })
+    })
+
 }
 
