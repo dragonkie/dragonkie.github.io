@@ -145,7 +145,7 @@ img {
   justify-content: flex-start;
   margin-bottom: 15px;
   width: 100%;
-  background-color: rgb(216, 232, 255);
+  background-color: #d8e8ff;
   justify-content: flex-start;
   flex: 1;
 }
@@ -155,12 +155,12 @@ img {
   color: #EEEEEE;
   font-weight: 600;
   padding: 4px;
-  background-color: rgb(0, 171, 233);
+  background-color: #00abe9;
   height: 100%;
 }
 .bar .fill {
   align-self: stretch;
-  background-color: rgb(0, 121, 161);
+  background-color: #0079a1;
   flex: 0 1;
 }
 
@@ -232,6 +232,12 @@ img {
 }
 #contact textarea {
   min-height: 200px;
+}
+#contact #submit-contact:hover, #contact #submit-contact:focus {
+  background-color: #515660;
+}
+#contact #submit-contact:active {
+  background-color: #10151b;
 }
 
 #footer {
@@ -390,6 +396,23 @@ img {
 }
 .modal .slide.animate {
   transition: left 0.3s;
+}
+
+.notification {
+  position: fixed;
+  border-radius: 5px;
+  background-color: #00adb5;
+  transition: all 0.5s;
+  padding: 30px;
+  right: 50px;
+  bottom: 0px;
+  transform: translate(0%, -50px);
+}
+.notification.new {
+  transform: translate(0%, 100%);
+}
+.notification.fade {
+  animation: fade-out 0.5s;
 }
 
 @keyframes fade-in {

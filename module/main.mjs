@@ -249,13 +249,60 @@ window.onload = () => {
     const cForm = document.getElementById("contact-form");
     cForm.addEventListener("submit", (e) => {
         e.preventDefault();
+        console.log('submitting form');
+
         const data = new FormData(cForm);
         const action = e.target.action;
+
+        // Create notification for submission pop up box
+        let notification = document.createElement('div') 
+        let content = document.createTextNode('Submitting contact form...');
+        notification.className = 'notification new';
+        notification.appendChild(content);
+        document.body.appendChild(notification);
+
+        // Disables the contact form
+        document.getElementById('submit-contact').disabled = true;
+        setTimeout(() => {
+            document.getElementById('submit-contact').disabled = false;
+        }, 2500)
+
+        setTimeout(() => {
+            notification.classList.remove('new');
+        }, 50);
+
+        // Add dismissal option on click
+        notification.onclick = () => {
+            notification.parentNode.removeChild(notification);
+        }
+
+        // add listener to delete after fading out
+        notification.addEventListener('animationend', (e) => {
+            if (notification.classList.contains('fade')) {
+                notification.parentNode.removeChild(notification);
+            }
+        })
+
+        // add 2 second delay to notification fade
+        setTimeout(() => {
+            notification.classList.add('fade');
+        }, 2000)
+
+        // set timeout to say message failed to send if it takes to long
+        let formTimeout = true
+        setTimeout(() => {
+            if (formTimeout) {
+                console.error('failed to send message')
+            }
+        }, 10000)
+
         fetch(action, {
             method: 'POST',
             body: data
         }).then(() => {
-            alert('Contact success');
+            // Create the contact succesful message
+            formTimeout = false;
+            console.log('Contact succesful')
         })
     })
 

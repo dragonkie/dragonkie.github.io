@@ -1,16 +1,17 @@
 $dark-1: #10151b;
 $dark-2: #222831;
 $dark-3: #393E46;
+$dark-4: #515660;
 
-$blue-1: rgb(0, 173, 181);
+$blue-1: #00adb5;
 
 $white-1: #EEEEEE;
 
 $pink-1: #ff69b4;
 
-$bar-fill: rgb(0, 121, 161);
-$bar-label: rgb(0, 171, 233);
-$bar-back: rgb(216, 232, 255);
+$bar-fill: #0079a1;
+$bar-label: #00abe9;
+$bar-back: #d8e8ff;
 
 * {
     font-family: Arial, Helvetica, sans-serif;
@@ -256,7 +257,7 @@ img {
 }
 
 #contact {
-    background-color: #222831;
+    background-color: $dark-2;
     color: $white-1;
 
     form {
@@ -269,7 +270,7 @@ img {
 
     input,
     textarea {
-        background-color: #393E46;
+        background-color: $dark-3;
         border: 0;
         padding: 1em;
         font-size: medium;
@@ -281,6 +282,16 @@ img {
 
     textarea {
         min-height: 200px;
+    }
+
+    #submit-contact {
+        &:hover, &:focus {
+            background-color: $dark-4;
+        }
+
+        &:active {
+            background-color: $dark-1;
+        }
     }
 }
 
@@ -470,6 +481,28 @@ img {
         &.animate {
             transition: left 0.3s;
         }
+    }
+}
+
+.notification {
+    position: fixed;
+    border-radius: 5px;
+    background-color: $blue-1;
+
+    transition: all 0.5s;
+    padding: 30px;
+
+    right: 50px;
+    bottom: 0px;
+
+    transform: translate(0%, -50px);
+
+    &.new {
+        transform: translate(0%, 100%);
+    }
+
+    &.fade {
+        animation: fade-out 0.5s;
     }
 }
 
